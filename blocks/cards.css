@@ -1,5 +1,6 @@
 .cards {
   padding-top: 51px;
+  padding-bottom: 67px;
 }
 
 .card__list {
@@ -37,9 +38,27 @@
   border-bottom-right-radius: 10px;
 }
 
+.card__title {
+  font-family: Inter, Arial, sans-serif;
+  max-width: 220px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+
 .card__like-button {
   background: transparent url(../images/Vector.svg) center no-repeat;
   width: 21px;
   height: 18px;
   border: none;
+}
+
+@media screen and (max-width: 320px) {
+  .cards {
+    padding-bottom: 0;
+  }
 }

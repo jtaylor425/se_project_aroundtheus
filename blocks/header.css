@@ -1,8 +1,42 @@
 .header {
   margin-top: 45px;
+  border-style: solid;
+  border-color: rgba(84, 84, 84, 1);
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 
 .header__logo {
   max-width: 173px;
   max-height: 33px;
+  padding-bottom: 41px;
+  color: white;
+}
+
+.header__divider {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: row;
+  border-color: rgba(84, 84, 84, 1);
+  border-bottom: 1px;
+  border-style: solid;
+}
+
+@media screen and (max-width: 775px) {
+  .header {
+    max-width: calc(100% - 40px);
+  }
+  .header__logo {
+    width: 150px;
+    height: 49px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__logo {
+    padding-left: 10px;
+    width: 126px;
+    height: 24px;
+  }
 }
