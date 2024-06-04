@@ -1,10 +1,12 @@
 .header {
   margin-top: 45px;
   border-style: solid;
-  border-color: rgba(84, 84, 84, 1);
+  border-color: rgba(84, 84, 84, 0.7);
   border-left: none;
   border-right: none;
   border-top: none;
+  border-width: 1px;
+  display: grid;
 }
 
 .header__logo {
@@ -12,15 +14,13 @@
   max-height: 33px;
   padding-bottom: 41px;
   color: white;
+  padding-left: 20px;
 }
 
-.header__divider {
-  display: flex;
-  flex-grow: 2;
-  flex-direction: row;
-  border-color: rgba(84, 84, 84, 1);
-  border-bottom: 1px;
-  border-style: solid;
+@media screen and (max-width: 879px) {
+  .header {
+    max-width: calc(100% - 40px);
+  }
 }
 
 @media screen and (max-width: 775px) {
@@ -34,8 +34,12 @@
 }
 
 @media screen and (max-width: 320px) {
+  .header {
+    max-width: 100%;
+  }
   .header__logo {
     padding-left: 10px;
+    padding-bottom: 32px;
     width: 126px;
     height: 24px;
   }
