@@ -3,7 +3,7 @@
   padding-bottom: 67px;
 }
 
-.card__list {
+.cards__list {
   display: grid;
   list-style: none;
   justify-content: center;

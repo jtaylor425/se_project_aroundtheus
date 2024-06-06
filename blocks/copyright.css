@@ -11,6 +11,7 @@
 @media screen and (max-width: 879px) {
   .copyright {
     max-width: 582px;
+    margin-right: auto;
   }
 }
 
@@ -23,6 +24,7 @@
 @media screen and (max-width: 580px) {
   .copyright {
     max-width: 280px;
+    margin-right: auto;
   }
 }
 

@@ -33,7 +33,7 @@
   line-height: 48px;
   font-weight: 500;
   color: white;
-  text-overflow: clip;
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -58,30 +58,30 @@
   width: 24px;
   align-self: center;
   border-color: white;
-  border-width: 1px;
+  transition: 0.5s ease-in-out;
+  border: 1px solid #fff;
 }
 
 .profile__edit-button:hover {
   opacity: 60%;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
 }
 
 .profile__add-button {
   background: transparent url(../images/Add_Button.svg) center no-repeat;
-  grid-area: add_button;
   min-width: 150px;
   min-height: 50px;
   border-color: white;
   margin-left: auto;
   overflow: inherit;
+  border: 1px solid #fff;
+  transition: 0.5s ease-in-out;
   border-radius: 2px;
 }
 
 .profile__add-button:hover {
   opacity: 60%;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 879px) {
@@ -90,28 +90,21 @@
   }
 
   .profile__info {
-    display: grid;
     grid-template-columns: minmax(auto, auto) 245px;
     grid-gap: 0 10px;
     text-wrap: nowrap;
   }
-  .profile__edit-button {
-    align-self: center;
-  }
 }
 
-@media screen and (max-width: 775px) {
-  .profile {
-    max-width: calc(100% - 40px);
+@media screen and (max-width: 768px) {
+  .profile__info {
+    grid-template-rows: repeat(2, auto);
   }
 
   .profile__add-button {
     display: flex;
     justify-self: center;
     margin: 0;
-  }
-  .profile__edit-button {
-    align-self: center;
   }
 }
 
@@ -140,6 +133,7 @@
     margin: 0;
     width: 282px;
     height: 50px;
+    background-size: 16px;
   }
 
   .profile__image {
@@ -162,21 +156,24 @@
     text-align: center;
     margin: 0;
     padding-bottom: 36px;
+    line-height: 16.94px;
     font-size: 14px;
+  }
+
+  .profile__info {
+    row-gap: 14px;
+    column-gap: 10px;
   }
 
   .profile__edit-button {
     height: 18px;
     width: 18px;
+    background-size: 7.5px;
   }
 
   .profile__title {
     font-size: 22px;
     line-height: 26.63px;
-    max-width: 100%;
-  }
-
-  .profile__image {
-    margin: 0;
+    max-width: 90%;
   }
 }

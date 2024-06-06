@@ -16,18 +16,3 @@
   position: relative;
   margin: 0 auto;
 }
-
-@media screen and (max-width: 775px) {
-  .page__section {
-    max-width: 879px;
-    width: 100%;
-    position: relative;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 16px) {
-  .page {
-    background-size: auto;
-  }
-}
