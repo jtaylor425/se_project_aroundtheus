@@ -17,6 +17,8 @@ Instead of using a PDF brief of the project, I used a Figma page to gather all t
 
 **_Video Overview_**
 
+- [Sprint 3 Adaptive Web Design](https://drive.google.com/file/d/1Ev3vJV2izzspqkZs6YHLTAJiBuLa4AWK/view?usp=sharing)
+
 **Figma**
 
 - [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
