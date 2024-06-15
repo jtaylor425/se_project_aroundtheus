@@ -12,16 +12,16 @@
   justify-content: center;
 }
 
-.modal__opened {
-  display: flex;
-}
-
 .modal__container {
   position: relative;
   background-color: #fff;
   padding: 36px;
   border-radius: 10px;
   width: 430px;
+}
+
+.modal__container_opened {
+  display: flex;
 }
 
 .modal__close {
