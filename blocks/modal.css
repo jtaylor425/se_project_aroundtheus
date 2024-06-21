@@ -98,7 +98,11 @@
   .modal__close {
     width: 26px;
     height: 26px;
-    left: calc(100% - 26px);
-    bottom: calc(100% + 13.62px);
+    left: calc(100% - 35px);
+    bottom: calc(100% + 26px);
+  }
+
+  .modal__heading {
+    font-size: 18px;
   }
 }
