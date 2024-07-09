@@ -101,13 +101,16 @@ function getCardElement(cardData) {
     cardElement.remove();
   });
 
-  cardImageEl.addEventListener("click", () => openModal(previewImageModal));
+  cardImageEl.addEventListener(
+    "click",
+    () => openModal(previewImageModal),
+    ((previewModalImage.src = cardData.link),
+    (previewModalImage.alt = cardData.name))
+  );
   previewCloseModal.addEventListener("click", () =>
     closeModal(previewImageModal)
   );
 
-  previewModalImage.src = cardData.link;
-  previewModalImage.alt = cardData.name;
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.name;
   cardTitleEl.textContent = cardData.name;
