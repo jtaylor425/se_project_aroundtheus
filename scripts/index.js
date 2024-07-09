@@ -101,9 +101,9 @@ function getCardElement(cardData) {
     cardElement.remove();
   });
 
-  cardImageEl.addEventListener("click", () => openModal(previewModalImage));
+  cardImageEl.addEventListener("click", () => openModal(previewImageModal));
   previewCloseModal.addEventListener("click", () =>
-    closeModal(previewModalImage)
+    closeModal(previewImageModal)
   );
 
   previewModalImage.src = cardData.link;
