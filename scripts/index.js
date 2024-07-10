@@ -54,12 +54,11 @@ const cardTitleInput = addCardFormElement.querySelector(
   ".modal__input_type_title"
 );
 const previewImageModal = document.querySelector("#preview-image-modal");
-const previewModalImage = previewImageModal.querySelector(
-  ".modal__preview-image"
-);
+const previewModalImage = document.querySelector(".modal__preview-image");
 const previewCloseModal = previewImageModal.querySelector(
   "#modal-close-button"
 );
+const previewCaption = document.querySelector(".modal__image-caption");
 
 //Form Data
 const cardUrlInput = addCardFormElement.querySelector(".modal__input_type_url");
@@ -104,7 +103,8 @@ function getCardElement(cardData) {
   cardImageEl.addEventListener("click", () => {
     openModal(previewImageModal),
       (previewModalImage.src = cardData.link),
-      (previewModalImage.alt = cardData.name);
+      (previewModalImage.alt = cardData.name),
+      (previewCaption.textContent = cardData.name);
   });
   previewCloseModal.addEventListener("click", () =>
     closeModal(previewImageModal)
