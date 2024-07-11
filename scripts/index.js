@@ -104,9 +104,6 @@ function getCardElement(cardData) {
       (previewModalImage.alt = cardData.name),
       (previewCaption.textContent = cardData.name);
   });
-  previewCloseModal.addEventListener("click", () =>
-    closeModal(previewImageModal)
-  );
 
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.name;
@@ -151,6 +148,10 @@ profileModalCloseButton.addEventListener("click", () =>
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 addCardModalCloseButton.addEventListener("click", () =>
   closeModal(addCardModal)
+);
+
+previewCloseModal.addEventListener("click", () =>
+  closeModal(previewImageModal)
 );
 
 initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
