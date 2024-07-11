@@ -124,7 +124,11 @@
   opacity: 0.8;
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 320px) {
+  .modal__heading {
+    font-size: 18px;
+  }
+
   .modal__close {
     width: 26px;
     height: 26px;
@@ -132,12 +136,6 @@
     bottom: calc(100% + 26px);
   }
 
-  .modal__heading {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 320px) {
   .modal__button {
     width: 238px;
     height: 46px;
@@ -161,8 +159,8 @@
     position: fixed;
     width: 30px;
     height: 30px;
-    left: calc(100% - 40px);
-    bottom: calc(100% - 263px);
+    top: 230px;
+    left: 280px;
   }
 
   .modal__preview-image {

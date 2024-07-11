@@ -2,38 +2,26 @@ const initialCards = [
   {
     name: "Yosemite Valley",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
-    delete: "images/Trash.svg",
-    deleteAlt: "trash",
   },
   {
     name: "Lake Louise",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg",
-    delete: "images/Trash.svg",
-    deleteAlt: "trash",
   },
   {
     name: "Bald Mountains",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/bald-mountains.jpg",
-    delete: "images/Trash.svg",
-    deleteAlt: "trash",
   },
   {
     name: "Latemar",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/latemar.jpg",
-    delete: "images/Trash.svg",
-    deleteAlt: "trash",
   },
   {
     name: "Vanoise National Park",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/vanoise.jpg",
-    delete: "images/Trash.svg",
-    deleteAlt: "trash",
   },
   {
     name: "Lago di Braies",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
-    delete: "images/Trash.svg",
-    deleteAlt: "trash",
   },
 ];
 
@@ -108,8 +96,6 @@ function getCardElement(cardData) {
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.name;
   cardTitleEl.textContent = cardData.name;
-  cardDeleteEl.src = cardData.delete;
-  cardDeleteEl.alt = cardData.deleteAlt;
   return cardElement;
 }
 
