@@ -55,9 +55,7 @@ const cardTitleInput = addCardFormElement.querySelector(
 );
 const previewImageModal = document.querySelector("#preview-image-modal");
 const previewModalImage = document.querySelector(".modal__preview-image");
-const previewCloseModal = previewImageModal.querySelector(
-  "#modal-close-button"
-);
+const previewCloseModal = previewImageModal.querySelector(".modal__close");
 const previewCaption = document.querySelector(".modal__image-caption");
 
 //Form Data

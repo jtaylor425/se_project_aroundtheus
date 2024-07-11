@@ -16,7 +16,7 @@
   display: flex;
 }
 
-.modal__preview-container {
+.modal__container {
   position: relative;
   background-color: none;
 }
@@ -24,7 +24,6 @@
 .modal__preview-image {
   max-width: 75vw;
   max-height: 75vh;
-  transition: opacity 0.5s linear;
 }
 
 .modal__image-caption {
@@ -33,7 +32,6 @@
   font-weight: 400;
   color: #fff;
   line-height: 14.52px;
-  margin-top: 10px;
 }
 
 .modal__close {
