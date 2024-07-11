@@ -43,9 +43,6 @@
 .modal__preview-image {
   max-width: 75vw;
   max-height: 75vh;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity linear 200ms;
 }
 
 .modal__image-caption {
