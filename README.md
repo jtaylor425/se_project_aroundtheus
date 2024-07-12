@@ -13,7 +13,23 @@ This project was a part of the adaptive web design sprint and taught the essenti
 
 **Skills & Knowledge Acquired**
 
-Instead of using a PDF brief of the project, I used a Figma page to gather all the requirements for the completion of this project. Additionally, I learned how to adapt the page layout to popular screen sizes by using media queries to rearrange elements at various max screen widths. It was important to avoid using absolute dimensions, whenever possible, for blocks/elements and instead using relative dimensions (i.e. max-width 100%, minmax, auto, etc.) so that the page layout would naturally adjust to desktop, tablet, and mobile resolutions without text or images wrapping. Another way to prevent text wrapping was using various CSS properties (i.e. text-overflow: ellipsis; white-space: nowrap; overflow: hidden;) to prevent elements from bunching up and wrapping as screen resolutions get smaller. Next, I learned how to effectively use display:grid CSS property to better control page layouts for adaptive web design. Some of the grid CSS properties include: grid-template-areas, grid-area, grid-teplate-columns/rows, and grid-gap. This allowed for better design for both the cards section as well as the profile info block. Lastly, I learned how to link third-party fonts to the page in order to have the whole page default to the Inter font at various font weights, styles using the font-face rule.
+- **Project Requirements:** Used a Figma page to gather all project requirements instead of a PDF brief.
+- **Responsive Design:**
+  - Adapted the page layout to popular screen sizes using media queries to rearrange elements at various max screen widths.
+  - Avoided using absolute dimensions for blocks/elements, favoring relative dimensions (e.g., `max-width: 100%`, `minmax`, `auto`) to ensure the page layout naturally adjusts to desktop, tablet, and mobile resolutions without text or images wrapping.
+  - Prevented text wrapping using various CSS properties:
+    - `text-overflow: ellipsis`
+    - `white-space: nowrap`
+    - `overflow: hidden`
+- **Grid Layout:**
+  - Effectively used `display: grid` CSS property to control page layouts for adaptive web design.
+  - Utilized grid properties such as:
+    - `grid-template-areas`
+    - `grid-area`
+    - `grid-template-columns/rows`
+    - `grid-gap`
+  - Applied grid design for both the cards section and the profile info block.
+- **Custom Fonts:** Linked third-party fonts to the page using the `@font-face` rule to default the entire page to the Inter font at various font weights and styles.
 
 **_Video Overview_**
 
