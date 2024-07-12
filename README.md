@@ -9,7 +9,7 @@
 
 **Intro**
 
-This project was a part of the adaptive web design sprint and taught the essential skills for creating layouts with HTML and CSS and using tools like Figma and VSCode. After completing this sprint I had the required skills and knowledge of an HTML/CSS Developer.
+This project was a part of the adaptive web design sprint and taught the essential skills for creating layouts with HTML and CSS and using tools like Figma and VSCode. After completing sprint 3 I had the required skills and knowledge of an HTML/CSS Developer. In sprint 5 I added javascript to create three modals to add additional cards, edit the profile heading and description, and to preview each card image.
 
 **Skills & Knowledge Acquired**
 
