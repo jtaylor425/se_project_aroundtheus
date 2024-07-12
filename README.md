@@ -31,6 +31,31 @@ This project was a part of the adaptive web design sprint and taught the essenti
   - Applied grid design for both the cards section and the profile info block.
 - **Custom Fonts:** Linked third-party fonts to the page using the `@font-face` rule to default the entire page to the Inter font at various font weights and styles.
 
+- **Variables:**
+
+  - Learn how to declare variables using `var`, `let`, and `const`.
+  - Understand the scope and hoisting behavior of different variable declarations.
+
+- **Data Types:**
+
+  - Explore primitive data types: `string`, `number`, `boolean`, `null`, `undefined`, `symbol`.
+  - Understand complex data types: `object`, `array`, `function`.
+
+- **Functions:**
+
+  - Declare functions using function expressions and function declarations.
+  - Understand the difference between regular functions and arrow functions.
+  - Learn about function scope, closures, and higher-order functions.
+
+- **Objects and Arrays:**
+
+  - Create and manipulate objects and arrays.
+  - Understand methods and properties.
+
+- **DOM Manipulation:**
+  - Learn how to select and manipulate DOM elements using methods like `getElementById`, `querySelector`.
+  - Understand event handling with `addEventListener`.
+
 **_Video Overview_**
 
 - [Sprint 3 Adaptive Web Design](https://drive.google.com/file/d/1Ev3vJV2izzspqkZs6YHLTAJiBuLa4AWK/view?usp=sharing)
