@@ -124,6 +124,14 @@
   opacity: 0.8;
 }
 
+.modal__error {
+  color: red;
+}
+
+.modal__button_disabled {
+  color: white;
+}
+
 @media screen and (max-width: 320px) {
   .modal__heading {
     font-size: 18px;
