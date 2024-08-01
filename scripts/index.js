@@ -55,12 +55,36 @@ const cardTemplate =
 const formToReset = document.querySelector(".modal__input");
 
 //Functions
+
+function modalCloseOnEsc(evt) {
+  if (evt.key === "Escape") {
+    closeModal;
+  }
+}
+
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keyup", closeModalOnEscape);
+  modal.removeEventListener("click", closeModalOnClick);
 }
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keyup", closeModalOnEscape);
+  modal.addEventListener("click", closeModalOnClick);
+}
+
+function closeModalOnEscape(e) {
+  if (e.key === "Escape") {
+    const modal = document.querySelector(".modal_opened");
+    closeModal(modal);
+  }
+}
+
+function closeModalOnClick(e) {
+  if (e.target.classList.contains("modal_opened")) {
+    closeModal(e.target);
+  }
 }
 
 function getCardElement(cardData) {

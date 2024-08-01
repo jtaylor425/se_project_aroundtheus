@@ -86,7 +86,13 @@
   gap: 29.74px;
 }
 
+.modal__input_container {
+  position: relative;
+}
+
 .modal__input {
+  position: relative;
+  width: 100%;
   display: block;
   padding-bottom: 13.26px;
   display: flex;
@@ -120,16 +126,29 @@
   padding: 0;
 }
 
+.modal__button_disabled {
+  border-style: solid;
+  background-color: #fff;
+  color: gray;
+  border: 1px;
+  opacity: 0.2;
+  pointer-events: none;
+  cursor: not-allowed;
+  border: 1px solid #000000;
+}
+
 .modal__button:hover {
   opacity: 0.8;
 }
 
 .modal__error {
+  font-size: 12px;
   color: red;
+  position: absolute;
 }
 
-.modal__button_disabled {
-  color: white;
+.modal__input_type_error {
+  color: red;
 }
 
 @media screen and (max-width: 320px) {
