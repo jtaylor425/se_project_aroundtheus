@@ -52,15 +52,8 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 const cardListEl = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
-const formToReset = document.querySelector(".modal__input");
 
 //Functions
-
-function modalCloseOnEsc(evt) {
-  if (evt.key === "Escape") {
-    closeModal;
-  }
-}
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
