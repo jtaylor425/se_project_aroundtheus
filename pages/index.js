@@ -32,7 +32,7 @@ const cardData = {
   link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
 };
 
-const card = new Card(cardData);
+const card = new Card(cardData, "#card-template");
 
 //Variables
 
@@ -93,19 +93,19 @@ function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
-  const likeButton = cardElement.querySelector(".card__like-button");
-  const cardDeleteEl = cardElement.querySelector(".card__delete");
+  //const likeButton = cardElement.querySelector(".card__like-button");
+  //const cardDeleteEl = cardElement.querySelector(".card__delete");
 
   //for card image modal add a click listener to the card image element
   // open modal with previewImage modal add into html
 
-  likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("card__like-button_active");
-  });
+  //likeButton.addEventListener("click", () => {
+  // likeButton.classList.toggle("card__like-button_active");
+  //});
 
-  cardDeleteEl.addEventListener("click", () => {
-    cardElement.remove();
-  });
+  //cardDeleteEl.addEventListener("click", () => {
+  //cardElement.remove();
+  //});
 
   cardImageEl.addEventListener("click", () => {
     openModal(previewImageModal);
