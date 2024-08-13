@@ -90,22 +90,25 @@ function closeModalOnClick(e) {
 }
 
 function getCardElement(cardData) {
+  const card = new Card(cardData, "#card-template");
+  return card.getView();
+} /* {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
-  //const likeButton = cardElement.querySelector(".card__like-button");
-  //const cardDeleteEl = cardElement.querySelector(".card__delete");
+  const likeButton = cardElement.querySelector(".card__like-button");
+  const cardDeleteEl = cardElement.querySelector(".card__delete");
 
-  //for card image modal add a click listener to the card image element
-  // open modal with previewImage modal add into html
+  for card image modal add a click listener to the card image element
+   open modal with previewImage modal add into html
 
-  //likeButton.addEventListener("click", () => {
-  // likeButton.classList.toggle("card__like-button_active");
-  //});
+  likeButton.addEventListener("click", () => {
+   likeButton.classList.toggle("card__like-button_active");
+  });
 
-  //cardDeleteEl.addEventListener("click", () => {
-  //cardElement.remove();
-  //});
+  cardDeleteEl.addEventListener("click", () => {
+  cardElement.remove();
+  });
 
   cardImageEl.addEventListener("click", () => {
     openModal(previewImageModal);
@@ -118,7 +121,7 @@ function getCardElement(cardData) {
   cardImageEl.alt = cardData.name;
   cardTitleEl.textContent = cardData.name;
   return cardElement;
-}
+}*/
 
 function renderCard(cardData, cardListEl) {
   const cardElement = getCardElement(cardData);
