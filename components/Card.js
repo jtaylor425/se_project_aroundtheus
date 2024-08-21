@@ -1,8 +1,9 @@
 export default class Card {
-  constructor({ name, link }, cardSelector) {
+  constructor({ name, link }, cardSelector, handleImageClick) {
     this._name = name;
     this._link = link;
     this._cardSelector = cardSelector;
+    this._handleImageClick = handleImageClick;
   }
 
   _setEventListeners() {
@@ -16,6 +17,11 @@ export default class Card {
       .addEventListener("click", () => {
         this._handleDeleteCard();
       });
+    const previewModal = this._cardElement
+      .querySelector(".card__image")
+      .addEventListener("click", () => {
+        this._handleImageClick(this);
+      });
   }
 
   _handleDeleteCard() {
@@ -25,7 +31,7 @@ export default class Card {
   _handleLikeButton() {
     this._cardElement
       .querySelector(".card__like-button")
-      .classList.toggle("card__like-button_is-active");
+      .classList.toggle("card__like-button_active");
   }
 
   getView() {

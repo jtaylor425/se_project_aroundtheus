@@ -70,11 +70,11 @@ function closeModal(modal) {
   modal.removeEventListener("click", closeModalOnClick);
 }
 
-function openModal(modal) {
+/*function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keyup", closeModalOnEscape);
   modal.addEventListener("click", closeModalOnClick);
-}
+}*/
 
 function closeModalOnEscape(e) {
   if (e.key === "Escape") {
@@ -87,6 +87,13 @@ function closeModalOnClick(e) {
   if (e.target.classList.contains("modal_opened")) {
     closeModal(e.target);
   }
+}
+
+_handleImageClick(cardData) {
+  previewModal.src = cardData.link;
+  previewModal.alt = cardData.name;
+  previewCaption.textContent = cardData.name;
+  this._setEventListeners();
 }
 
 function getCardElement(cardData) {
