@@ -96,13 +96,6 @@ function handleImageClick(card) {
   openModal(previewImageModal);
 }
 
-handleImageClick(cardData) {
-  previewModal.src = cardData.link;
-  previewModal.alt = cardData.name;
-  previewCaption.textContent = cardData.name;
-  this._setEventListeners();
-}
-
 function getCardElement(cardData) {
   const card = new Card(cardData, "#card-template");
   return card.getView();
