@@ -32,7 +32,7 @@ const cardData = {
   link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
 };
 
-const card = new Card(cardData, "#card-template");
+const card = new Card(cardData, "#card-template", handleImageClick);
 
 //Variables
 
@@ -70,11 +70,11 @@ function closeModal(modal) {
   modal.removeEventListener("click", closeModalOnClick);
 }
 
-/*function openModal(modal) {
+function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keyup", closeModalOnEscape);
   modal.addEventListener("click", closeModalOnClick);
-}*/
+}
 
 function closeModalOnEscape(e) {
   if (e.key === "Escape") {
@@ -89,7 +89,14 @@ function closeModalOnClick(e) {
   }
 }
 
-_handleImageClick(cardData) {
+function handleImageClick(card) {
+  previewModalImage.src = card.link;
+  previewModalImage.alt = card.name;
+  previewCaption.textContent = card.name;
+  openModal(previewImageModal);
+}
+
+handleImageClick(cardData) {
   previewModal.src = cardData.link;
   previewModal.alt = cardData.name;
   previewCaption.textContent = cardData.name;
