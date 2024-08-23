@@ -1,4 +1,5 @@
 import Card from "../components/Card.js";
+/*import FormValidator from "../components/FormValidator.js";*/
 
 const initialCards = [
   {
@@ -32,7 +33,7 @@ const cardData = {
   link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
 };
 
-const card = new Card(cardData, "#card-template", handleImageClick);
+const card = new Card(cardData, "#card-template");
 
 //Variables
 
@@ -61,6 +62,29 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 const cardListEl = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
+
+//Validation
+
+/*const validationSettings = {
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
+
+const editFormElement = profileEditModal.querySelector("#profile-edit-modal");
+const addFormElement = addCardModal.querySelector("#add-card-modal");
+
+const editFormValidator = new FormValidator(
+  validationSettings,
+  editFormElement
+);
+
+const addFormValidator = new FormValidator(validationSettings, addFormElement);
+
+editFormValidator.enableValidation();
+addFormValidator.enableValidation();*/
 
 //Functions
 
@@ -97,7 +121,7 @@ function handleImageClick(card) {
 }
 
 function getCardElement(cardData) {
-  const card = new Card(cardData, "#card-template");
+  const card = new Card(cardData, "#card-template", handleImageClick);
   return card.getView();
 } /* {
   const cardElement = cardTemplate.cloneNode(true);

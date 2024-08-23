@@ -34,6 +34,13 @@ export default class Card {
       .classList.toggle("card__like-button_active");
   }
 
+  _handleImageClick(cardData) {
+    previewModal.src = cardData.link;
+    previewModal.alt = cardData.name;
+    previewCaption.textContent = cardData.name;
+    this._setEventListeners();
+  }
+
   getView() {
     this._cardElement = document
       .querySelector(this._cardSelector)
