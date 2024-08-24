@@ -20,7 +20,7 @@ export default class Card {
     const previewModal = this._cardElement
       .querySelector(".card__image")
       .addEventListener("click", () => {
-        this._handleImageClick(this);
+        this._handleImageClick({ name: this._name, link: this._link });
       });
   }
 

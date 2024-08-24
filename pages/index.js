@@ -1,5 +1,5 @@
 import Card from "../components/Card.js";
-/*import FormValidator from "../components/FormValidator.js";*/
+import FormValidator from "../components/FormValidator.js";
 
 const initialCards = [
   {
@@ -65,7 +65,7 @@ const cardTemplate =
 
 //Validation
 
-/*const validationSettings = {
+const validationSettings = {
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__button",
   inactiveButtonClass: "modal__button_disabled",
@@ -84,7 +84,7 @@ const editFormValidator = new FormValidator(
 const addFormValidator = new FormValidator(validationSettings, addFormElement);
 
 editFormValidator.enableValidation();
-addFormValidator.enableValidation();*/
+addFormValidator.enableValidation();
 
 //Functions
 
@@ -123,36 +123,7 @@ function handleImageClick(card) {
 function getCardElement(cardData) {
   const card = new Card(cardData, "#card-template", handleImageClick);
   return card.getView();
-} /* {
-  const cardElement = cardTemplate.cloneNode(true);
-  const cardImageEl = cardElement.querySelector(".card__image");
-  const cardTitleEl = cardElement.querySelector(".card__title");
-  const likeButton = cardElement.querySelector(".card__like-button");
-  const cardDeleteEl = cardElement.querySelector(".card__delete");
-
-  for card image modal add a click listener to the card image element
-   open modal with previewImage modal add into html
-
-  likeButton.addEventListener("click", () => {
-   likeButton.classList.toggle("card__like-button_active");
-  });
-
-  cardDeleteEl.addEventListener("click", () => {
-  cardElement.remove();
-  });
-
-  cardImageEl.addEventListener("click", () => {
-    openModal(previewImageModal);
-    previewModalImage.src = cardData.link;
-    previewModalImage.alt = cardData.name;
-    previewCaption.textContent = cardData.name;
-  });
-
-  cardImageEl.src = cardData.link;
-  cardImageEl.alt = cardData.name;
-  cardTitleEl.textContent = cardData.name;
-  return cardElement;
-}*/
+}
 
 function renderCard(cardData, cardListEl) {
   const cardElement = getCardElement(cardData);
