@@ -29,7 +29,7 @@ class FormValidator {
     return !inputList.every((inputEl) => inputEl.validity.valid);
   }
 
-  _toggleButtonState(inputEls, submitButton, inactiveButtonClass) {
+  _toggleButtonState(inputEls) {
     let foundInvalid = false;
 
     inputEls.forEach((inputEl) => {
@@ -39,11 +39,11 @@ class FormValidator {
     });
 
     if (hasInvalidInput(inputEls)) {
-      submitButton.classList.add(this._inactiveButtonClass);
-      submitButton.disabled = true;
+      this._submitButton.classList.add(this._inactiveButtonClass);
+      this._submitButton.disabled = true;
     } else {
-      submitButton.classList.remove(this._inactiveButtonClass);
-      submitButton.disabled = false;
+      this._submitButton.classList.remove(this._inactiveButtonClass);
+      this._submitButton.disabled = false;
     }
   }
 
@@ -71,7 +71,7 @@ class FormValidator {
     inputEls.forEach((inputEl) => {
       inputEl.addEventListener("input", (e) => {
         checkInputValidity(this._form, inputEl, options);
-        toggleButtonState(inputEls, submitButton, options);
+        toggleButtonState(inputEls, this._submitButton, options);
       });
     });
   }
