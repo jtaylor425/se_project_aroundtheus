@@ -1,6 +1,5 @@
 class FormValidator {
   constructor(validationSettings, formElement) {
-    this._formSelector = validationSettings.formSelector;
     this._inputSelector = validationSettings.inputSelector;
     this._submitButtonSelector = validationSettings.submitButtonSelector;
     this._inactiveButtonClass = validationSettings.inactiveButtonClass;
@@ -11,14 +10,14 @@ class FormValidator {
     this._submitButton = this._form.querySelector(this._submitButtonSelector);
   }
 
-  _showInputError(inputEl, errorMessageEl) {
+  _showInputError(inputEl) {
     let errorMessageEl = this._form.querySelector(`#${inputEl.id}-error`);
     inputEl.classList.add(this._inputErrorClass);
     errorMessageEl.textContent = inputEl.validationMessage;
     errorMessageEl.classList.add(this._errorClass);
   }
 
-  _hideInputError(inputEl, errorMessageEl) {
+  _hideInputError(inputEl) {
     let errorMessageEl = this._form.querySelector(`#${inputEl.id}-error`);
     inputEl.classList.remove(this._inputErrorClass);
     errorMessageEl.textContent = inputEl.validationMessage;
@@ -29,7 +28,7 @@ class FormValidator {
     return !inputList.every((inputEl) => inputEl.validity.valid);
   }
 
-  _toggleButtonState(inputEls) {
+  _toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
     let foundInvalid = false;
 
     inputEls.forEach((inputEl) => {
@@ -65,21 +64,20 @@ class FormValidator {
     }
   }
 
-  _setEventListeners() {
-    this._inputEls = [...this._form.querySelectorAll(this._inputSelector)];
-    this._submitButton = this._form.querySelector(this._submitButtonSelector);
+  _setEventListeners(inputEls) {
     inputEls.forEach((inputEl) => {
       inputEl.addEventListener("input", (e) => {
         checkInputValidity(this._form, inputEl, options);
-        toggleButtonState(inputEls, this._submitButton, options);
+        toggleButtonState(inputEls, this._submitButton, inactiveButtonClass);
       });
     });
   }
+
   enableValidation() {
     this._form.addEventListener("submit", (e) => {
       e.preventDefault();
     });
-    setEventListeners(formElement, options);
+    setEventListeners(this._form, options);
   }
 }
 
