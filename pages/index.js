@@ -73,8 +73,8 @@ const validationSettings = {
   errorClass: "modal__error_visible",
 };
 
-const editFormElement = profileEditModal.querySelector("#profile-edit-modal");
-const addFormElement = addCardModal.querySelector("#add-card-modal");
+const editFormElement = profileEditModal.querySelector(".modal__form");
+const addFormElement = addCardModal.querySelector(".modal__form");
 
 const editFormValidator = new FormValidator(
   validationSettings,
