@@ -144,6 +144,7 @@ function handleAddCardFormSubmit(evt) {
   renderCard({ name, link }, cardListEl);
   addCardFormElement.reset();
   closeModal(addCardModal);
+  addFormValidator.disableButton();
 }
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
