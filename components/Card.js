@@ -7,17 +7,17 @@ export default class Card {
   }
 
   _setEventListeners() {
-    const likeButton = this._cardElement
+    this._cardElement
       .querySelector(".card__like-button")
       .addEventListener("click", () => {
         this._handleLikeButton();
       });
-    const cardDelete = this._cardElement
+    this._cardElement
       .querySelector(".card__delete")
       .addEventListener("click", () => {
         this._handleDeleteCard();
       });
-    const previewModal = this._cardElement
+    this._cardElement
       .querySelector(".card__image")
       .addEventListener("click", () => {
         this._handleImageClick({ name: this._name, link: this._link });
@@ -32,13 +32,6 @@ export default class Card {
     this._cardElement
       .querySelector(".card__like-button")
       .classList.toggle("card__like-button_active");
-  }
-
-  _handleImageClick(cardData) {
-    previewModal.src = cardData.link;
-    previewModal.alt = cardData.name;
-    previewCaption.textContent = cardData.name;
-    this._setEventListeners();
   }
 
   getView() {
