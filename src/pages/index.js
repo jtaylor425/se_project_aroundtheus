@@ -1,6 +1,6 @@
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
-import "/src/pages/index.css";
+import "../pages/index.css";
 import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForms.js";
 import Section from "../components/Section.js";
@@ -36,20 +36,16 @@ const cardTemplate =
 
 /*Linked Classes*/
 const popupWithEditProfileForm = new PopupWithForm(
-  { popupSelector: "#profile-edit-modal" },
+  "#profile-edit-modal",
   handleProfileEditSubmit
 );
 
 const popupWithAddCardForm = new PopupWithForm(
-  {
-    popupSelector: "#add-card-modal",
-  },
+  "#add-card-modal",
   handleAddCardFormSubmit
 );
 
-const popupWithImage = new PopupWithImage({
-  popupSelector: "#preview-image-modal",
-});
+const popupWithImage = new PopupWithImage("#preview-image-modal");
 
 const section = new Section(
   {
