@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Joel Taylor" />
     <meta name="keywords" content="travel, destinations, U.S." />
-    <link href="vendor/normalize.css" rel="stylesheet" />
-    <link href="pages/index.css" rel="stylesheet" />
-    <link href="favicon.ico" rel="icon" />
     <title>Around the U.S.</title>
   </head>
   <body class="page">
@@ -15,13 +12,17 @@
       <header class="header page__section">
         <img
           class="header__logo"
-          src="/src/images/header-logo.svg"
+          src="<%=require('./images/header-logo.svg')%>"
           alt="Header Logo"
         />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img class="profile__image" src="<%=require('./src/images/Avatar.jpg')%>" alt="Avatar" />
+          <img
+            class="profile__image"
+            src="<%=require('./images/Avatar.jpg')%>"
+            alt="Avatar"
+          />
           <div class="profile__info">
             <h1 class="profile__title" id="profile-title">Jaques Cousteau</h1>
             <button
@@ -142,5 +143,5 @@
         </div>
       </li>
     </template>
-    <script src="./src/pages/index.js" type="module"></script>
+  </body>
 </html>
