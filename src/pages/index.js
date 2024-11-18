@@ -45,6 +45,14 @@ const popupWithAddCardForm = new PopupWithForm(
   handleAddCardFormSubmit
 );
 
+profileEditBtn.addEventListener("click", () => {
+  popupWithEditProfileForm.open();
+});
+
+addNewCardButton.addEventListener("click", () => {
+  popupWithAddCardForm.open();
+});
+
 const popupWithImage = new PopupWithImage("#preview-image-modal");
 
 const section = new Section(
