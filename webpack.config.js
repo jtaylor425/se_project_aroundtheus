@@ -20,7 +20,7 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, "dist"),
     compress: true,
-    port: 5513,
+    port: 5514,
     open: true,
     liveReload: true,
     hot: false,
@@ -50,7 +50,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "/src/index.html",
+      template: "./src/index.html",
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),

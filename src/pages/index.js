@@ -1,12 +1,11 @@
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
-import "../pages/index.css";
+import "./index.css";
 import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForms.js";
 import Section from "../components/Section.js";
 import UserInfo from "../components/UserInfo.js";
-import { initialCards } from "../utils/Constants.js";
-import { config } from "../utils/Constants.js";
+import { initialCards, config } from "../utils/Constants.js";
 
 /*Variables*/
 
@@ -62,6 +61,7 @@ const section = new Section(
   },
   ".cards__list"
 );
+section.renderItems();
 
 const userInfo = new UserInfo({
   nameElement: ".profile__title",
