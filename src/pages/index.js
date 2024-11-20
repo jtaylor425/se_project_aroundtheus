@@ -117,7 +117,7 @@ function getCardElement(cardData) {
 
 function renderCard(cardData, cardListEl) {
   const cardElement = getCardElement(cardData);
-  cardListEl.prepend(cardElement);
+  section.addItem(cardElement);
 }
 
 /*Event Handlers*/
@@ -163,11 +163,11 @@ addCardFormElement.addEventListener("submit", handleAddCardFormSubmit);
 profileEditBtn.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  openModal(profileEditModal);
+  openModal(profileEditForm);
 });
 
 profileModalCloseButton.addEventListener("click", () =>
-  closeModal(profileEditModal)
+  closeModal(profileEditForm)
 );
 
 // add new card button

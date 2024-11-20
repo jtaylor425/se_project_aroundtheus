@@ -136,7 +136,11 @@
     <template id="card-template">
       <li class="card">
         <img class="card__image" src="" alt="" />
-        <img class="card__delete" src="images/Trash.svg" alt="trash-icon" />
+        <img
+          class="card__delete"
+          src="<%=require('./images/Trash.svg')%>"
+          alt="trash-icon"
+        />
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
