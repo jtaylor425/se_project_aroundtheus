@@ -13,25 +13,13 @@ const profileEditBtn = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const addCardModal = document.querySelector("#add-card-modal");
 const profileModalCloseButton = profileEditModal.querySelector(".modal__close");
-const addCardModalCloseButton = addCardModal.querySelector(".modal__close");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const addNewCardButton = document.querySelector(".profile__add-button");
 const profileTitleInput = document.querySelector("#title-input");
 const profileDescriptionInput = document.querySelector("#description-input");
 const addCardFormElement = addCardModal.querySelector(".modal__form");
-const cardTitleInput = addCardFormElement.querySelector(
-  ".modal__input_type_title"
-);
-const previewImageModal = document.querySelector("#preview-image-modal");
-const previewModalImage = document.querySelector(".modal__preview-image");
-const previewCloseModal = previewImageModal.querySelector(".modal__close");
-const previewCaption = document.querySelector(".modal__image-caption");
-const cardUrlInput = addCardFormElement.querySelector(".modal__input_type_url");
 const profileEditForm = profileEditModal.querySelector(".modal__form");
-const cardListEl = document.querySelector(".cards__list");
-const cardTemplate =
-  document.querySelector("#card-template").content.firstElementChild;
 
 /*Linked Classes*/
 const popupWithEditProfileForm = new PopupWithForm(
