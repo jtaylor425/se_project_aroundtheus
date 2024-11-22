@@ -101,10 +101,6 @@ profileEditBtn.addEventListener("click", () => {
   profileDescriptionInput.value = profileDescription.textContent;
 });
 
-profileModalCloseButton.addEventListener("click", () =>
-  closeModal(profileEditForm)
-);
-
 //Validation
 
 const editFormValidator = new FormValidator(config, profileEditForm);
