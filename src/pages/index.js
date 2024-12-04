@@ -93,6 +93,8 @@ function handleAddCardFormSubmit(inputValue) {
     link: inputValue.url,
   };
   renderCard(cardData);
+  addCardFormElement.reset();
+  addFormValidator.disableButton();
   popupWithAddCardForm.close();
 }
 
