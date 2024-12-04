@@ -12,7 +12,6 @@ import { initialCards, config } from "../utils/Constants.js";
 const profileEditBtn = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const addCardModal = document.querySelector("#add-card-modal");
-const profileModalCloseButton = profileEditModal.querySelector(".modal__close");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const addNewCardButton = document.querySelector(".profile__add-button");
@@ -24,7 +23,8 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 /*Linked Classes*/
 const popupWithEditProfileForm = new PopupWithForm(
   "#profile-edit-modal",
-  handleProfileEditSubmit
+  handleProfileEditSubmit,
+  console.log(handleProfileEditSubmit)
 );
 
 const popupWithAddCardForm = new PopupWithForm(
