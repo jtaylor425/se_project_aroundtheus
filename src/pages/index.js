@@ -69,7 +69,7 @@ function getCardElement(cardData) {
   return card.getView();
 }
 
-function renderCard(cardData, cardListEl) {
+function renderCard(cardData) {
   console.log(cardData);
   const cardElement = getCardElement(cardData);
   section.addItem(cardElement);
@@ -97,11 +97,6 @@ function handleAddCardFormSubmit(inputValue) {
   addFormValidator.disableButton();
   popupWithAddCardForm.close();
 }
-
-profileEditBtn.addEventListener("click", () => {
-  profileTitleInput.value = profileTitle.textContent;
-  profileDescriptionInput.value = profileDescription.textContent;
-});
 
 //Validation
 
