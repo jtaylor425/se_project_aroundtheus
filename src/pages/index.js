@@ -12,8 +12,6 @@ import { initialCards, config } from "../utils/Constants.js";
 const profileEditBtn = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const addCardModal = document.querySelector("#add-card-modal");
-const profileTitle = document.querySelector(".profile__title");
-const profileDescription = document.querySelector(".profile__description");
 const addNewCardButton = document.querySelector(".profile__add-button");
 const profileTitleInput = document.querySelector("#title-input");
 const profileDescriptionInput = document.querySelector("#description-input");
@@ -33,6 +31,9 @@ const popupWithAddCardForm = new PopupWithForm(
 );
 
 profileEditBtn.addEventListener("click", () => {
+  const userData = userInfo.getUserInfo();
+  profileTitleInput.value = userData.name;
+  profileDescriptionInput.value = userData.description;
   popupWithEditProfileForm.open();
 });
 
@@ -78,12 +79,10 @@ function renderCard(cardData) {
 /*Event Handlers*/
 
 function handleProfileEditSubmit({ title, description }) {
-  console.log(title, description);
   userInfo.setUserInfo({
     name: title,
     description: description,
   });
-  console.log(userInfo.getUserInfo());
   popupWithEditProfileForm.close();
 }
 
