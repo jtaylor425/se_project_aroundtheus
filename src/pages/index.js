@@ -6,6 +6,7 @@ import PopupWithForm from "../components/PopupWithForms.js";
 import Section from "../components/Section.js";
 import UserInfo from "../components/UserInfo.js";
 import { initialCards, config } from "../utils/Constants.js";
+import { Api } from "../components/Api.js";
 
 /*Variables*/
 
@@ -51,6 +52,14 @@ const section = new Section(
   ".cards__list"
 );
 section.renderItems();
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "c56e30dc-2883-4270-a59e-b2f7bae969c6",
+    "Content-Type": "application/json",
+  },
+});
 
 const userInfo = new UserInfo({
   nameElement: ".profile__title",
