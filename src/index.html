@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Joel Taylor" />
     <meta name="keywords" content="travel, destinations, U.S." />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>Around the U.S.</title>
   </head>
   <body class="page">
@@ -130,6 +131,22 @@
         ></button>
         <img class="modal__preview-image" src="" alt="" />
         <p class="modal__image-caption"></p>
+      </div>
+    </div>
+
+    <!--Card Delete Modal-->
+    <div class="modal" id="delete-card-modal"></div>
+      <div class="modal__container_delete">
+        <button class="modal__close" type="button"></button>
+        <p class="modal__heading_delete">Are you sure?</p>
+        <form class="modal__form" id="add-card-form">
+          <button
+            class="button modal__button"
+            type="submit"
+          >
+            Yes
+          </button>
+        </form>
       </div>
     </div>
 
